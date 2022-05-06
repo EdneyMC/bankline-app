@@ -14,4 +14,9 @@ export class CorrentistaService {
     list(): Observable<any> {
       return this.http.get(`${baseUrl}/correntistas`);
     }
+
+    //Chama o save(post) para incluir um novo correntista
+    create(correntista:any): Observable<any> {
+      return this.http.post(`${baseUrl}/correntistas`,correntista);
+    }
 }
